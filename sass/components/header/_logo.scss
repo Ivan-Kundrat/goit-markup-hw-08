@@ -1,0 +1,14 @@
+.logo {
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  width: 153px;
+  margin-right: 85px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  span {
+    color: $accent-color;
+  }
+}
