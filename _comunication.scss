@@ -1,0 +1,31 @@
+.comunication {
+  color: $secondary-text-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+
+  .item {
+    margin-right: 30px;
+  }
+  .item:last-child {
+    margin-right: 0px;
+  }
+}
+
+.comunication .link {
+  transition-property: color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.comunication .icon {
+  fill: currentColor;
+  margin-right: 10px;
+  vertical-align: middle;
+}
