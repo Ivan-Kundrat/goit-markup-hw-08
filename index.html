@@ -18,10 +18,32 @@
   <body>
     <!--Шапка проекту-->
     <header class="header">
-      <div class="container">
-        <div class="navigation">
+      <div class="container header">
+        <a href="" lang="en" class="logo"><span>Web</span> Studio</a>
+        <button
+          type="button"
+          class="menu-button is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="переключатель мобильного меню"
+          >
+            <use
+              class="icon-menu"
+              href="./images/symbol-defs.svg#icon-close40px"
+            ></use>
+            <use
+              class="icon-close"
+              href="./images/symbol-defs.svg#icon-menu40px"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
           <nav class="navigation">
-            <a href="" lang="en" class="logo"><span>Web</span> Studio</a>
             <ul class="site-nav">
               <li class="item">
                 <a href="./index.html" class="link current">Студия</a>
@@ -222,8 +244,9 @@
           <ul class="activity-list">
             <li class="item">
               <img
+              srcset="./images/activity-1.jpg 1x"
                 class="img"
-                src="./images/img(6).jpg"
+                src="./images/activity-1.jpg "
                 alt="открытый ноутбук"
                 width="370"
                 height="294"
@@ -233,8 +256,9 @@
             </li>
             <li class="item">
               <img
+              srcset="./images/activity-2.jpg 1x"
                 class="img"
-                src="./images/box(1).jpg"
+                src="./images/activity-2.jpg"
                 alt="смартфон"
                 width="370"
                 height="294"
@@ -244,8 +268,9 @@
             </li>
             <li class="item">
               <img
+              srcset="./images/activity-3.jpg 1x"
                 class="img"
-                src="./images/img(1)(1).jpg"
+                src="./images/activity-3.jpg"
                 alt="монитор"
                 width="370"
                 height="294"
@@ -264,7 +289,13 @@
           <ul lang="en" class="list">
             <li class="item">
               <img
-                src="./images/img(2)(1).jpg"
+              srcset="
+              ./images/player-1.jpg 1x,
+
+              ./images/player-1@2x.jpg 2x,
+              "
+              class="player"
+                src="./images/player-1@2x.jpg"
                 alt="photo of John"
                 width="270"
                 height="260"
@@ -304,7 +335,12 @@
             </li>
             <li class="item">
               <img
-                src="./images/img(3)(1).jpg"
+               srcset="
+              ./images/player-2.jpg 1x,
+              ./images/player-2@2x.jpg 2x,
+              "
+              class="player"
+                src="./images/player-2.jpg"
                 alt="photo of Marta"
                 width="270"
                 height="260"
@@ -344,7 +380,12 @@
             </li>
             <li class="item">
               <img
-                src="./images/img(4)(1).jpg"
+               srcset="
+              ./images/player-3.jpg 1x,
+              ./images/player-3@2x.jpg 2x,
+              "
+              class="player"
+                src="./images/player-3.jpg"
                 alt="photo of Robert"
                 width="270"
                 height="260"
@@ -384,7 +425,12 @@
             </li>
             <li class="item">
               <img
-                src="./images/img(5)(1).jpg"
+               srcset="
+              ./images/player-4.jpg 1x,
+              ./images/player-4@2x.jpg 2x,
+              "
+              class="player"
+                src="./images/player-4.jpg"
                 alt="photo of Martin"
                 width="270"
                 height="260"
@@ -475,47 +521,25 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
+  <footer class="footer">
+    <div class="container footer">
+      <div class="footer-flex">
         <div class="footer-up">
           <a href="" lang="en" class="logo"><span>Web</span>Studio</a>
-          <h2 class="footer-call">присоединяйтесь</h2>
-          <form class="footer-form">
-            <label class="label" for="mail">Подпишитесь на рассылку</label>
-            <div class="field">
-              <input
-                class="mail"
-                type="email"
-                name="mail"
-                id="mail"
-                placeholder="E-mail"
-              />
-              <button class="button" type="submit">
-                Подписаться
-                <svg class="icon" width="24px" height="24px">
-                  <use href="./images/symbol-defs.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="footer-middle">
           <address class="address">
             г. Киев, пр-т Леси Украинки, 26
             <ul class="footer-nav">
               <li>
-                <a href="mailto:info@example.com" class="footer-link"
-                  >info@example.com</a
-                >
+                <a href="mailto:info@example.com" class="footer-link">info@example.com</a>
               </li>
               <li>
-                <a href="tell:+380991111111" class="footer-link"
-                  >+38 099 111 11 11</a
-                >
+                <a href="tell:+380991111111" class="footer-link">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
-
+        </div>
+        <div class="footer-social">
+          <h2 class="footer-call">присоединяйтесь</h2>
           <ul class="social-links">
             <li class="item">
               <a class="link" href="" aria-label="ссылка на инстаграм">
@@ -547,10 +571,25 @@
             </li>
           </ul>
         </div>
-
-        <p class="footer-developer">2020 | Developed by GoIT Students</p>
       </div>
-    </footer>
+      <form class="footer-form">
+        <label class="label" for="mail">Подпишитесь на рассылку</label>
+        <div class="field">
+          <input class="mail" type="email" name="mail" id="mail" placeholder="E-mail" />
+          <button class="button" type="submit">
+            Подписаться
+            <svg class="icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  
+    <p class="footer-developer">2020 | Developed by GoIT Students</p>
+    </div>
+  </footer>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

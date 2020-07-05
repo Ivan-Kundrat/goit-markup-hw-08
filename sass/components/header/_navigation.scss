@@ -6,4 +6,8 @@
     font-style: normal;
     margin-left: auto;
   }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    display: none;
+  }
 }

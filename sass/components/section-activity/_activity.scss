@@ -8,6 +8,10 @@
   &-list {
     display: flex;
   }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    display: none;
+  }
 }
 
 .activity .item {
