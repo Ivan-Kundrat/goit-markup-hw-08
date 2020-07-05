@@ -20,13 +20,20 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  @media screen and (min-width: $mobile) {
+}
+@media screen and (min-width: 480px) {
+  .container {
     width: 480px;
   }
-  @media screen and (min-width: $tablet) {
+}
+@media screen and (min-width: 768px) {
+  .container {
     width: 768px;
   }
-  @media screen and (min-width: $desktop) {
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
     width: 1200px;
   }
 }
@@ -458,6 +465,7 @@ p {
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
+
 .modal-icon {
   position: absolute;
   display: inline-block;
@@ -773,9 +781,8 @@ p {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 0) {
   .activity {
-    width: 480px;
     display: none;
   }
 }
@@ -898,7 +905,23 @@ p {
 .player {
   width: 100%;
 }
-
+@media screen and (min-width: 480px) {
+  .player {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .player {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .player {
+    width: 270px;
+  }
+}
 .command-player .name {
   font-weight: 500;
   font-size: 16px;
@@ -921,12 +944,19 @@ p {
   margin-right: auto;
   padding-bottom: 24px;
 }
+@media screen and (min-width: 768px) {
+  .command-player .social-links {
+    padding-bottom: 24px;
+  }
+}
+
 .command-player .social-links .item {
   margin-left: auto;
   margin-right: auto;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
 .command-player .social-links .link {
   display: inline-block;
   width: 44px;

@@ -301,6 +301,7 @@ p {
   margin-right: 10px;
   vertical-align: middle;
 }
+
 .filter {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -317,7 +318,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  width: 480px;
+  width: 362px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -343,6 +344,9 @@ p {
 .filter-list .item:last-child {
   margin-right: 0;
 }
+.filter-list .item:nth-child(3) {
+  margin-right: 0;
+}
 .filter-list .item:nth-child(n + 4) {
   margin-bottom: 0;
 }
@@ -355,6 +359,7 @@ p {
   line-height: 1.62;
   text-align: center;
   border-radius: 4px;
+  border: 0;
   padding: 6px 22px;
   -webkit-transition-property: background-color color;
   transition-property: background-color color;
@@ -377,7 +382,7 @@ p {
   justify-content: center;
 }
 .card-list .item {
-  width: 370px;
+  width: 450px;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
